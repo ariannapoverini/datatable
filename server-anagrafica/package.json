@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "json-server": "^0.17.0"
+  },
+  "scripts": {  "start": "npx json-server --w db.json --no cors" }
+}
