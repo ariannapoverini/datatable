@@ -50,7 +50,10 @@ $(document).ready(function () {
       title: "Actions",
       name: "Actions",
       render: function (data, type, row, meta) {
-        return '<a class="delbutton fa fa-minus-square btn btn-danger" href="#"></a>';
+        return (
+          '<div class="container-flex"> <a class="editbutton myBtn btnBlue" href="#">modify</a>' +
+          '<a class="delbutton myBtn btnRed" href="#">delete</a> </div>'
+        );
       },
       disabled: true,
     },

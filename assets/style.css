@@ -1,1 +1,344 @@
-@import '../jquery.dataTables.min.css';
+/* @import '../jquery.dataTables.min.css'; */
+
+
+*,*::before,*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+:root {
+    --blue:         rgb(19, 92, 154);
+    --light-blue:   #a0cff8;
+    --gray:         #707070;
+    --light-gray:   #edeaea;
+    --white:        #ffffff;
+}
+
+
+
+a.myBtn {
+    border-radius: 5px;
+    display: block;
+    margin-bottom: 10px;
+    overflow: hidden;
+    padding: 5px;
+    text-decoration: none;
+    text-align: center;
+}
+
+a.btnRed {
+    background: rgb(255, 194, 194);
+    border: 1px solid red;
+    color: red;
+    position: relative;
+    transition: color 1s;
+    z-index: 2;
+}
+
+a.btnBlue {
+    background: #cfcfff;
+    border: 1px solid var(--blue);
+    color: var(--blue);
+    position: relative;
+    transition: color 1s;
+    z-index: 2;
+}
+
+a.myBtn:hover {
+    color: white;
+}
+
+a.btnRed::before {
+    background: red;
+    content: '';
+    height: 100%;
+    left: -35px;
+    position: absolute;
+    top: 0;
+    transform: skewX(35deg);
+    transition: width 1s;
+    width: 0;
+    z-index: -1;
+}
+
+a.btnBlue::before {
+    background: var(--blue);
+    content: '';
+    height: 100%;
+    left: -35px;
+    position: absolute;
+    top: 0;
+    transform: skewX(35deg);
+    transition: width 1s;
+    width: 0;
+    z-index: -1;
+}
+
+a.myBtn:hover::before {
+    width: 200%;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+footer {
+    border-top: 2px solid var(--blue);
+}
+
+h3 {
+    color: var(--blue);
+    font-size: 25px;
+    margin: 30px 0;
+}
+
+nav {
+    align-items: center;
+    bottom: 0;
+    display: flex;
+    position: relative;
+    top: 0;
+    width: 145px;
+    justify-content: center;
+}
+
+nav span.menu {
+    display: block;
+    color: var(--blue);
+    position: fixed;
+    top: 61%;
+    right: -135px;
+    letter-spacing: 15px;
+    transform: rotate(-90deg);
+    text-transform: capitalize;
+    width: 300px;
+}
+
+table {
+    border-collapse: collapse;
+    border: 1px solid var(--blue) !important;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+table tbody tr:nth-child(even){
+    background: var(--light-gray);
+}
+
+tbody tr:hover {
+    box-shadow: 0 0 20px var(--light-gray) !important;
+}
+
+table.dataTable tbody td:last-child {
+    padding: 5px 10px;
+    justify-content: space-between;
+}
+.container {
+    margin: 0;
+}
+
+.container-flex {
+    display: flex;
+    width: 125px;
+    justify-content: space-around;
+    
+}
+
+.dataTables_filter {
+    margin-bottom: 10px;
+}
+
+.dataTables_filter input {
+    border-radius: 10px !important;
+    border-color: var(--blue) !important;
+}
+
+.fa-plus-square:before {
+    content: 'Add' !important;
+    font-family: 'roboto';
+}
+
+.wrapper-icon {
+    border-style: solid;
+    display: flex;
+    border-image:
+    linear-gradient(
+      to bottom,
+      var(--blue),
+      rgba(255, 255, 255, 1)
+    ) 1 100%;
+    flex-wrap: wrap;
+    position: fixed;
+    top: 15%;
+    transform: translateX(-72%);
+    text-align: center;
+    transition: 0.8s;
+    justify-content: flex-end;
+}
+
+.wrapper-icon:hover {
+    transform: translateX(-10%);
+}
+
+.icon:after {
+    border-bottom: 13px solid transparent;
+    border-top: 13px solid transparent;
+    border-left: 13px solid var(--blue);
+    content: '';
+    display: block;
+    position: relative;
+    top: -240px;
+    right: -126px;
+}
+
+.wrapper-icon:before {
+    border-bottom: 17px solid transparent;
+    border-top: 17px solid transparent;
+    border-left: 17px solid var(--white);
+    content: '';
+    display: block;
+    position: relative;
+    top: -240px;
+    right: -126px;
+}
+
+.wrapper-icon svg {
+    cursor: pointer;
+    display: block;
+    fill: var(--blue);
+    left: 50%;
+    margin: 60px 0 0;
+    position: relative;
+    transform: translateX(-50%);
+    width: 25%;
+}
+
+.wrapper-icon svg:hover {
+    width: 30%;
+    transition: 0.6s;
+}
+
+.wrapper-icon p {
+    text-transform: capitalize;
+    margin: 10px;
+}
+
+.logo {
+    width: 200px;
+    margin-bottom: 50px;
+}
+
+.logo img {
+    width: 100%;
+}
+
+.table {
+    width: 100%; 
+}
+
+.table thead tr th {
+    padding: 20px;
+}
+
+
+.wrapper {
+    margin-top: 96px;
+    margin-left: 49px;
+    width: 100%;
+}
+
+.wrapper-container {
+    display: flex;
+    width: 100%;
+}
+
+/* footer */
+.wrapper-footer {
+    display: flex;
+    margin: 10px 0;
+    justify-content: center;
+}
+
+.wrapper-footer .fa-instagram {
+    margin: 0 5px;
+}
+
+
+.wrapper-footer .img-footer {
+    margin: 20px;
+    width: 100px;
+}
+
+.wrapper-footer .img-footer img {
+    width: 100%;
+}
+
+.wrapper-footer p {
+    margin: 17px 0;
+    font-size: 1.3rem;
+    text-align: center;
+    width: 200px;
+}
+
+.wrapper-footer .social {
+    margin-top: 10px;
+    text-align: center;
+    width: 200px;
+}
+
+.wrapper-footer .social svg {
+    cursor: pointer;
+    margin-right: 10px;
+    fill: var(--blue);
+    width: 25px;
+}
+
+.contact-us span {
+    display: block;
+    text-align: center;
+    width: 100%;
+}
+
+
+#addbutton {
+    background: rgb(225, 254, 166);
+    border: 1px solid green;
+    color: green;
+    position: relative;
+    transition: color 1s;
+    z-index: 2;
+    overflow: hidden;
+}
+
+#addbutton:before {
+    background:#7ab800;
+    content: '';
+    height: 100%;
+    left: -35px;
+    position: absolute;
+    top: 0;
+    transform: skewX(35deg);
+    transition: width 1s;
+    width: 0;
+    z-index: -1;
+}
+
+#addbutton:hover::before {
+    width: 200%;
+}
+
+#addbutton:hover {
+    color: var(--white);
+}
+
+#example_wrapper {
+    padding-bottom: 40px;
+}
+
+#example_filter input {
+    border: 1px solid var(--blue);
+    outline: none !important;
+    padding: 5px;
+}
