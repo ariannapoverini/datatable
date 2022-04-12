@@ -92,6 +92,7 @@ h3 {
     color: var(--blue);
     font-size: 25px;
     margin: 30px 0;
+    padding-left: 12px;
 }
 
 nav {
@@ -244,7 +245,7 @@ table.dataTable tbody td:last-child {
 
 
 .wrapper {
-    margin-top: 96px;
+    margin-top: 50px;
     margin-left: 49px;
     width: 100%;
 }
@@ -304,12 +305,13 @@ table.dataTable tbody td:last-child {
 
 #addbutton {
     background: rgb(225, 254, 166);
-    border: 1px solid green;
-    color: green;
+    border: 1px solid darkgreen;
+    color: darkgreen;
     position: relative;
     transition: color 1s;
     z-index: 2;
     overflow: hidden;
+    top: 35px;
 }
 
 #addbutton:before {

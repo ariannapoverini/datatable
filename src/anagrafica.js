@@ -51,8 +51,8 @@ $(document).ready(function () {
       name: "Actions",
       render: function (data, type, row, meta) {
         return (
-          '<div class="container-flex"> <a class="editbutton myBtn btnBlue" href="#">modify</a>' +
-          '<a class="delbutton myBtn btnRed" href="#">delete</a> </div>'
+          '<div class="container-flex"> <a class="editbutton myBtn btnBlue" href="#">Modify</a>' +
+          '<a class="delbutton myBtn btnRed" href="#">Delete</a> </div>'
         );
       },
       disabled: true,
