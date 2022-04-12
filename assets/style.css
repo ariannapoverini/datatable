@@ -85,13 +85,16 @@ body {
 }
 
 footer {
-    border-top: 2px solid var(--blue);
+    border-top: 2px solid #008b95;
+    margin-top: 40px;
+    padding-top: 30px;
 }
 
 h3 {
     color: var(--blue);
-    font-size: 25px;
-    margin: 30px 0;
+    font-size: 22px;
+    margin: 20px 0;
+    margin-bottom: 10px;
     padding-left: 12px;
 }
 
@@ -228,7 +231,8 @@ table.dataTable tbody td:last-child {
 
 .logo {
     width: 200px;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
+    margin-left: 10px;
 }
 
 .logo img {
