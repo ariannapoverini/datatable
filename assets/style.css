@@ -348,3 +348,11 @@ table.dataTable tbody td:last-child {
     outline: none !important;
     padding: 5px;
 }
+
+table.dataTable tbody > tr.selected, table.dataTable tbody > tr > .selected {
+    background-color: var(--light-blue);
+}
+
+#alteditor-row- {
+    display:none;
+}

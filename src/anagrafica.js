@@ -1,11 +1,6 @@
 $(document).ready(function () {
   const columns = [
     {
-      data: "id",
-      title: "Id",
-      type: "readonly",
-    },
-    {
       data: "RagioneSociale",
       title: "Ragione Sociale",
     },
@@ -47,11 +42,11 @@ $(document).ready(function () {
     },
     {
       data: null,
-      title: "Actions",
+      title: "",
       name: "Actions",
       render: function (data, type, row, meta) {
         return (
-          '<div class="container-flex"> <a class="editbutton myBtn btnBlue" href="#">Modify</a>' +
+          // '<div class="container-flex"> <a class="editbutton myBtn btnBlue" href="#">Modify</a>' +
           '<a class="delbutton myBtn btnRed" href="#">Delete</a> </div>'
         );
       },
